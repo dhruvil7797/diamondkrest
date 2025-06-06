@@ -15,90 +15,13 @@
         });
     </script>
     <style>
-        /* Custom styles for this page */
         .hero {
-            position: relative;
-            background: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg');
-            background-size: 100% 100%; /* Stretch to fill both width and height */
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 80px 0; /* Increased padding for better spacing */
-        }
-        
-        /* Calculate header height and adjust hero section accordingly */
-        body {
-            padding-top: 0; /* Remove padding from body */
-        }
-        
-        .header {
-            background-color: rgba(255, 255, 255, 0.95); /* Add background to header */
-        }
-        
-        /* Media queries for responsive header height */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 100px; /* Smaller padding for mobile */
-            }
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3);
-            z-index: 1;
+            background-image: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg');
         }
         
         .hero-content {
-            position: relative;
-            z-index: 2;
             background-color: rgba(0, 0, 0, 0.4);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            max-width: 800px;
             margin: 0 auto;
-            backdrop-filter: blur(3px);
-        }
-        
-        .hero-title, .hero-subtitle, .hero-description {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-        }
-        
-        .hero-buttons {
-            margin-top: 30px;
-        }
-        
-        .hero-buttons .btn {
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            border-width: 2px;
-        }
-        
-        .hero-buttons .btn-white {
-            background-color: var(--accent);
-            color: var(--text-light);
-            border: none;
-        }
-        
-        .hero-buttons .btn-white:hover {
-            background-color: var(--accent-dark);
-            transform: translateY(-5px);
-        }
-        
-        .hero-buttons .btn-outline {
-            border-color: var(--text-light);
-            color: var(--text-light);
-        }
-        
-        .hero-buttons .btn-outline:hover {
-            background-color: var(--text-light);
-            color: var(--primary);
-            transform: translateY(-5px);
         }
         
         .location-title {
@@ -167,7 +90,7 @@
                     <div class="logo-icon"></div>
                     <div class="logo-text">
                         <div class="logo-title">DiamondKrest</div>
-                        <div class="logo-tagline">Treasured Clients, Priceless Care</div>
+                        <div class="logo-tagline">Healthcare Staffing and Home Care Services</div>
                     </div>
                 </div>
                 <div class="header-contact">
@@ -213,7 +136,7 @@
         <div class="container hero-content">
             <p class="hero-subtitle">Healthcare Excellence</p>
             <h1 class="hero-title">Exceptional Healthcare Staffing & Home Care Services</h1>
-            <p class="hero-description">Your trusted partner in personalized home care services and healthcare staffing in Ottawa. We provide compassionate care tailored to your unique needs.</p>
+            <p class="hero-description">Your trusted partner in healthcare staffing and personalized home care services and  in Ottawa. We provide compassionate care tailored to your unique needs.</p>
             <div class="hero-buttons">
                 <a href="contact.html" class="btn btn-white">Request a Consultation</a>
                 <a href="services.html" class="btn btn-outline">Explore Our Services</a>
@@ -295,8 +218,8 @@
             <div class="cta-content">
                 <h2 class="cta-title">Join Our Team of Compassionate Caregivers</h2>
                 <p class="cta-description">Make a difference in the lives of others by joining our dedicated team of healthcare professionals.</p>
-                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
-                <a href="careers.html" class="btn btn-white">View Career Opportunities</a>
+                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now &nbsp; <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
+                <a href="careers.html" class="btn btn-outline">View Career Opportunities</a>
             </div>
         </div>
     </section>
@@ -304,9 +227,8 @@
     <section class="map">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Our Location</p>
-                <h2 class="section-title">Find Us</h2>
-                <h3 class="location-title">Our Ottawa Office</h3>
+                <p class="section-subtitle">Find Us</p>
+                <h2 class="section-title">Our Location</h2>
                 <p class="location-subtitle">We'd love to welcome you to our healthcare center</p>
             </div>
             <div class="map-container">
@@ -351,7 +273,7 @@
                 <div class="footer-column">
                     <h3>About DiamondKrest</h3>
                     <p>DiamondKrest provides professional healthcare staffing and personalized home care services in Ottawa.</p>
-                    <p>Treasured Clients, Priceless Care</p>
+                    <p>Healthcare Staffing and Home Care Services</p>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Information</h3>

@@ -17,101 +17,25 @@
     <style>
         /* Custom styles for this page */
         .hero {
-            position: relative;
-            background: url('https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg');
-            background-size: cover;
-            background-position: center;
-            object-fit: cover;
-            padding: 80px 0; /* Increased padding for better spacing */
-        }
-        
-        /* Calculate header height and adjust hero section accordingly */
-        body {
-            padding-top: 0; /* Remove padding from body */
-        }
-        
-        .header {
-            background-color: rgba(255, 255, 255, 0.95); /* Add background to header */
-        }
-        
-        /* Media queries for responsive header height */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 100px; /* Smaller padding for mobile */
-            }
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3);
-            z-index: 1;
+            background-image: url('https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg');
         }
         
         .hero-content {
-            position: relative;
-            z-index: 2;
             background-color: rgba(0, 0, 0, 0.4);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            max-width: 800px;
             margin: 0 auto;
-            backdrop-filter: blur(3px);
-        }
-        
-        .hero-title, .hero-subtitle, .hero-description {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-        }
-        
-        .hero-buttons {
-            margin-top: 30px;
-        }
-        
-        .hero-buttons .btn {
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            border-width: 2px;
-        }
-        
-        .hero-buttons .btn-white {
-            background-color: var(--accent);
-            color: var(--text-light);
-            border: none;
-        }
-        
-        .hero-buttons .btn-white:hover {
-            background-color: var(--accent-dark);
-            transform: translateY(-5px);
-        }
-        
-        .hero-buttons .btn-outline {
-            border-color: var(--text-light);
-            color: var(--text-light);
-        }
-        
-        .hero-buttons .btn-outline:hover {
-            background-color: var(--text-light);
-            color: var(--primary);
-            transform: translateY(-5px);
         }
     </style>
 </head>
-<body style="padding-top: 0;">
+<body>
     <!-- Header -->
-    <header class="header" style="position: fixed; width: 100%; top: 0; z-index: 1000; background-color: rgba(255, 255, 255, 0.95);">
+    <header class="header" style="position: fixed; width: 100%; top: 0; z-index: 1000;">
         <div class="header-top">
             <div class="container header-top-content">
                 <div class="logo">
                     <div class="logo-icon"></div>
                     <div class="logo-text">
                         <div class="logo-title">DiamondKrest</div>
-                        <div class="logo-tagline">Treasured Clients, Priceless Care</div>
+                        <div class="logo-tagline">Healthcare Staffing and Home Care Services</div>
                     </div>
                 </div>
                 <div class="header-contact">
@@ -153,8 +77,7 @@
         </nav>
     </header>
     
-    <section class="hero" style="position: relative; background: url('https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg'); background-size: cover; background-position: center; object-fit: cover; margin-top: 140px; padding: 80px 0;">
-        <div style="content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3); z-index: 1;"></div>
+    <section class="hero" >
         <div class="container hero-content">
             <p class="hero-subtitle">Who We Are</p>
             <h1 class="hero-title">About DiamondKrest</h1>
@@ -170,13 +93,13 @@
         <div class="container about-container">
             <div class="about-image">
                 <div class="about-image-main">
-                    <img src="https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg" alt="Healthcare professional with patient">
+                    <img src="https://static.wixstatic.com/media/51a460_d54b7dbb04da4314a97d3bb74b09262a~mv2.jpg/v1/fill/w_980,h_506,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1847335308.jpg" alt="Healthcare professional with patient">
                 </div>
             </div>
             <div class="about-content">
                 <p class="about-subtitle">About Us</p>
                 <h2 class="about-title">Welcome to DiamondKrest</h2>
-                <p class="about-description">Welcome to DiamondKrest Healthcare Staffing and Home Care Services, your trusted partner in Healthcare Staffing and personalized home care services in Ottawa. Our dedicated team is committed to providing well experienced Healthcare staff and the highest quality in-home health care with compassion and expertise.</p>
+                <p class="about-description">Your trusted partner in <strong>Healthcare Staffing and personalized home care services</strong> in Ottawa. Our dedicated team is committed to providing well experienced Healthcare staff and the highest quality in-home health care with compassion and expertise.</p>
                 <p class="about-description">At DiamondKrest, we understand the importance of providing comprehensive and specialized home care services and competent Healthcare Staff.</p>
                 <ul class="about-list">
                     <li class="about-list-item">
@@ -262,49 +185,15 @@
         </div>
     </section>
     
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">Client Experiences</p>
-                <h2 class="section-title">Testimonials</h2>
-                <p class="section-description">Hear what our clients have to say about our services.</p>
-            </div>
-            <div class="testimonial-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        DiamondKrest has been a lifesaver for our family. The caregivers are incredibly kind and attentive, providing the support and care that our loved one needs.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-image">J</div>
-                        <div class="testimonial-author-info">
-                            <h4>J. M.</h4>
-                            <p>Client Family Member</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        The level of professionalism and genuine care provided by DiamondKrest Home Care is unmatched. I highly recommend their services to anyone in need of compassionate home care.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-image">S</div>
-                        <div class="testimonial-author-info">
-                            <h4>Sarah T.</h4>
-                            <p>Client</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     
     <section class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready to Experience Our Care?</h2>
                 <p class="cta-description">Contact us today to learn more about our healthcare staffing and home care services.</p>
-                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
-                <a href="contact.html" class="btn btn-white">Request a Consultation</a>
+                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now &nbsp; <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
+                <a href="contact.html" class="btn btn-outline">Request a Consultation</a>
             </div>
         </div>
     </section>
