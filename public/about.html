@@ -20,9 +20,194 @@
             background-image: url('https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg');
         }
         
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.4);
-            margin: 0 auto;
+        /* Contact Section Styles */
+        .contact-section {
+            padding: 100px 0;
+            background-color: var(--secondary);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--text-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            transition: transform 0.5s ease;
+        }
+        
+        .contact-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .contact-details {
+            padding: 30px;
+        }
+        
+        .contact-details h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-details h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .contact-detail-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(107, 196, 166, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: var(--accent);
+            font-size: 20px;
+        }
+        
+        .contact-detail-text h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .contact-detail-text p {
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+        
+        .contact-detail-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-detail-text a:hover {
+            color: var(--accent);
+        }
+        
+        .contact-form-container {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--text-light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-form-container h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-form-container h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .form-group {
+            flex: 1 0 calc(50% - 10px);
+        }
+        
+        .form-group.full-width {
+            flex: 1 0 100%;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(58, 110, 165, 0.2);
+        }
+        
+        .contact-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+        }
+        
+        /* Responsive styles for contact section */
+        @media (max-width: 992px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-info,
+            .contact-form-container {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .form-group {
+                flex: 1 0 100%;
+            }
         }
     </style>
 </head>
@@ -72,7 +257,7 @@
                     <li class="nav-item"><a href="services.html" class="nav-link" id="nav-services">Our Services</a></li>
                     <li class="nav-item"><a href="careers.html" class="nav-link" id="nav-careers">Careers</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary header-btn">Contact Us</a>
+                <a href="about.html#contact-us" class="btn btn-primary header-btn">Contact Us</a>
             </div>
         </nav>
     </header>
@@ -83,7 +268,7 @@
             <h1 class="hero-title">About DiamondKrest</h1>
             <p class="hero-description">Learn more about our mission, values, and commitment to providing exceptional healthcare services.</p>
             <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-white">Contact Us</a>
+                <a href="about.html#contact-us" class="btn btn-white">Contact Us</a>
                 <a href="services.html" class="btn btn-outline">Our Services</a>
             </div>
         </div>
@@ -187,13 +372,142 @@
     
     
     
+    <section id="contact-us" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Get In Touch</p>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">We're here to answer your questions and provide the support you need.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-image">
+                        <img src="https://images.unsplash.com/photo-1664382950513-939431ef4e5c?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customer service representative">
+                    </div>
+                    <div class="contact-details">
+                        <h3>Contact Information</h3>
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Address</h4>
+                                <p>1338 Wellington Street West<br>Ottawa, ON K1Y 3B7, Unit 10</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Phone</h4>
+                                <p>Phone: <a href="tel:6139862724">613-986-2724</a></p>
+                                <p>Fax: 613-672-7016</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@diamondkrest.com">info@diamondkrest.com</a></p>
+                            </div>
+                        </div>
+                        <p>Available 24 hours a day, 7 days a week, 365 days a year</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form action="https://formsubmit.co/cloudgenz.it@gmail.com" method="POST" class="contact-form">
+                        <input type="hidden" name="_subject" value="New contact form submission from DiamondKrest website">
+                        <input type="hidden" name="_next" value="https://diamondkrest.com/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="map">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Find Us</p>
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-description">We're conveniently located in Ottawa to serve you better.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.5775568709236!2d-75.7573!3d45.4025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce04506052a2d9%3A0x52e8a7b951c2f2b7!2s1338%20Wellington%20St%20W%2C%20Ottawa%2C%20ON%20K1Y%203B7%2C%20Canada!5e0!3m2!1sen!2sus!4v1625097654321!5m2!1sen!2sus"></iframe>
+                <div class="map-info">
+                    <h3>Visit Our Office</h3>
+                    <div class="map-info-item">
+                        <div class="map-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="map-info-text">
+                            1338 Wellington Street West<br>
+                            Ottawa, ON K1Y 3B7, Unit 10
+                        </div>
+                    </div>
+                    <div class="map-info-item">
+                        <div class="map-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="map-info-text">
+                            Phone: <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a><br>
+                            Fax: 613-672-7016
+                        </div>
+                    </div>
+                    <div class="map-info-item">
+                        <div class="map-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="map-info-text">
+                            Email: <a href="mailto:info@diamondkrest.com" style="color: inherit; text-decoration: none;">info@diamondkrest.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready to Experience Our Care?</h2>
                 <p class="cta-description">Contact us today to learn more about our healthcare staffing and home care services.</p>
                 <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now &nbsp; <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
-                <a href="contact.html" class="btn btn-outline">Request a Consultation</a>
+                <a href="about.html#contact-us" class="btn btn-outline">Request a Consultation</a>
             </div>
         </div>
     </section>
@@ -260,7 +574,7 @@
                 <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
                 <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="about.html#contact-us" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
     </div>

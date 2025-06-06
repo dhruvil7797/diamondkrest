@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - DiamondKrest Healthcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common/styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('nav-careers').classList.add('active');
+        });
+    </script>
+    <style>
+        /* Custom styles for this page */
+        .hero {
+            background-image: url('https://static.wixstatic.com/media/51a460_7d0cf8485b604ff6b60e4c6c7610ec15~mv2.jpg/v1/fill/w_1960,h_1238,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1307432645.jpg');
+        }
+        
+        .careers-hotline {
+            padding: 80px 0;
+            background-color: var(--text-light);
+            text-align: center;
+        }
+        
+        .hotline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: var(--secondary);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .hotline-title {
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .hotline-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .hotline-contact {
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .hotline-contact a {
+            color: var(--primary);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .hotline-contact a:hover {
+            color: var(--accent);
+        }
+        
+        .careers-content {
+            padding: 80px 0;
+            background-color: var(--secondary);
+        }
+        
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .career-card {
+            background-color: var(--text-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .career-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .career-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .career-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .career-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .career-content {
+            padding: 30px;
+        }
+        
+        .career-title {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .career-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .career-description {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        
+        .career-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .career-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .career-list-icon {
+            color: var(--accent);
+            font-size: 18px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .join-team {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .join-team-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .join-team-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .join-team-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .join-team-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .careers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .join-team-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hotline-container {
+                padding: 30px 20px;
+            }
+            
+            .hotline-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" style="position: fixed; width: 100%; top: 0; z-index: 1000;">
+        <div class="header-top">
+            <div class="container header-top-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">
+                        <div class="logo-title">DiamondKrest</div>
+                        <div class="logo-tagline">Healthcare Staffing and Home Care Services</div>
+                    </div>
+                </div>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <a href="tel:6139862724" style="color: inherit; text-decoration: none;">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <a href="mailto:info@diamondkrest.com" style="color: inherit; text-decoration: none;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-info">
+                            <span class="contact-value">Available 24/7, 365 days a year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link" id="nav-services">Our Services</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link active" id="nav-careers">Careers</a></li>
+                </ul>
+                <a href="about.html#contact-us" class="btn btn-primary header-btn">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <p class="hero-subtitle">Join Our Team</p>
+            <h1 class="hero-title">Career Opportunities</h1>
+            <p class="hero-description">Make a difference in the lives of others by joining our dedicated team of healthcare professionals.</p>
+            <div class="hero-buttons">
+                <a href="#careers-info" class="btn btn-white">Explore Opportunities</a>
+                <a href="about.html#contact-us" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="careers-hotline">
+        <div class="container">
+            <div class="hotline-container">
+                <h2 class="hotline-title">Careers Hotline</h2>
+                <div class="hotline-contact">
+                    <p>For more information E-mail us at: <a href="mailto:info@DiamondKrest.com">info@DiamondKrest.com</a> or call us at <a href="tel:6139862724">613-986-2724</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="careers-info" class="careers-content">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Career Opportunities</p>
+                <h2 class="section-title">Join Our Healthcare Team</h2>
+            </div>
+            
+            <div class="careers-info-container" style="max-width: 1200px; margin: 0 auto; background-color: var(--text-light); border-radius: var(--border-radius); padding: 50px; box-shadow: var(--shadow); position: relative; overflow: hidden;">
+                <!-- Decorative elements -->
+                <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background-color: rgba(107, 196, 166, 0.1); border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background-color: rgba(58, 110, 165, 0.1); border-radius: 50%;"></div>
+                
+                <!-- Content -->
+                <h3 style="color: var(--primary); font-size: 28px; margin-bottom: 25px; text-align: center;">Would you like to work as a Nurse, PSW, Companion, etc?</h3>
+                
+                <div style="position: relative; padding: 30px; margin-bottom: 40px; background-color: var(--secondary); border-radius: var(--border-radius); border-left: 5px solid var(--accent);">
+                    <h4 style="color: var(--primary); font-size: 22px; margin-bottom: 15px;">Do You Have the Heart of a Caregiver?</h4>
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">Want to serve your community by providing professional home care? We are always looking to hire exceptional team members our clients families deserve.</p>
+                </div>
+                
+                <div style="position: relative; padding: 30px; margin-bottom: 40px; background-color: var(--secondary); border-radius: var(--border-radius); border-left: 5px solid var(--primary);">
+                    <h4 style="color: var(--primary); font-size: 22px; margin-bottom: 15px;">Our Unique Approach</h4>
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">Our approach to recruiting, training, recognizing and rewarding caregivers is unique. Our client focused culture puts as much energy and effort into enhancing the lives and engaging our caregivers as much as we do for our clients.</p>
+                </div>
+                
+                <div style="position: relative; padding: 30px; margin-bottom: 40px; background-color: var(--secondary); border-radius: var(--border-radius); border-left: 5px solid var(--accent);">
+                    <h4 style="color: var(--primary); font-size: 22px; margin-bottom: 15px;">What We're Looking For</h4>
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">We are looking for experienced, caring, dependable caregivers who want to make a difference by providing in-home, non-medical care to our clients.</p>
+                </div>
+                
+                <div style="position: relative; padding: 30px; background-color: var(--secondary); border-radius: var(--border-radius); border-left: 5px solid var(--primary);">
+                    <h4 style="color: var(--primary); font-size: 22px; margin-bottom: 15px;">Training & Flexibility</h4>
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 0;">We provide an exclusive training program for all positions and we offer flexible schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="join-team">
+        <div class="container">
+            <div class="join-team-content">
+                <h2 class="join-team-title">Ready to Start Your Career With Us?</h2>
+                <p class="join-team-description">If you're passionate about making a difference in people's lives and are looking for a rewarding career in healthcare, we'd love to hear from you.</p>
+                <div class="join-team-buttons">
+                    <a href="mailto:info@DiamondKrest.com" class="btn btn-white">Email Your Resume</a>
+                    <a href="tel:6139862724" class="btn btn-outline">Call Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>About DiamondKrest</h3>
+                    <p>DiamondKrest provides professional healthcare staffing and personalized home care services in Ottawa.</p>
+                    <p>Healthcare Staffing and Home Care Services</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p>1338 Wellington Street West</p>
+                            <p>Ottawa, ON K1Y 3B7, Unit 10</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <p>Phone: <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></p>
+                            <p>Fax: 613-672-7016</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p>Email: <a href="mailto:info@diamondkrest.com" style="color: inherit; text-decoration: none;">info@diamondkrest.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hours of Operation</h3>
+                    <p>Available 24 hours a day</p>
+                    <p>7 days a week</p>
+                    <p>365 days a year</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DiamondKrest Healthcare Staffing and Home Care Services. All Rights Reserved. | Treasured Clients, Priceless Care</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-menu-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
+                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                <li class="nav-item"><a href="about.html#contact-us" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <script>
+        // Add scrolled class to header when scrolling
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            });
+        }
+        
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            });
+        }
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-nav .nav-link');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>

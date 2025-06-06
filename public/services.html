@@ -17,101 +17,49 @@
     <style>
         /* Custom styles for this page */
         .hero {
-            position: relative;
-            background: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg');
-            background-size: cover;
-            background-position: center;
-            object-fit: cover;
-            padding: 80px 0; /* Increased padding for better spacing */
+            background-image: url('https://static.wixstatic.com/media/51a460_b7b9dd533dfa4bae9e4a1bd590b27d6b~mv2.jpg/v1/fill/w_1960,h_1012,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1387432869.jpg');
         }
         
-        /* Calculate header height and adjust hero section accordingly */
-        body {
-            padding-top: 0; /* Remove padding from body */
+        /* Service icon image styles */
+        .service-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
         }
         
-        .header {
-            background-color: rgba(255, 255, 255, 0.95); /* Add background to header */
+        /* Override services grid to show max 3 columns */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
         }
         
-        /* Media queries for responsive header height */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 100px; /* Smaller padding for mobile */
+        /* Media query for medium screens */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            max-width: 800px;
-            margin: 0 auto;
-            backdrop-filter: blur(3px);
-        }
-        
-        .hero-title, .hero-subtitle, .hero-description {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-        }
-        
-        .hero-buttons {
-            margin-top: 30px;
-        }
-        
-        .hero-buttons .btn {
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            border-width: 2px;
-        }
-        
-        .hero-buttons .btn-white {
-            background-color: var(--accent);
-            color: var(--text-light);
-            border: none;
-        }
-        
-        .hero-buttons .btn-white:hover {
-            background-color: var(--accent-dark);
-            transform: translateY(-5px);
-        }
-        
-        .hero-buttons .btn-outline {
-            border-color: var(--text-light);
-            color: var(--text-light);
-        }
-        
-        .hero-buttons .btn-outline:hover {
-            background-color: var(--text-light);
-            color: var(--primary);
-            transform: translateY(-5px);
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-<body style="padding-top: 0;">
+<body>
     <!-- Header -->
-    <header class="header" style="position: fixed; width: 100%; top: 0; z-index: 1000; background-color: rgba(255, 255, 255, 0.95);">
+    <header class="header" style="position: fixed; width: 100%; top: 0; z-index: 1000;">
         <div class="header-top">
             <div class="container header-top-content">
                 <div class="logo">
                     <div class="logo-icon"></div>
                     <div class="logo-text">
                         <div class="logo-title">DiamondKrest</div>
-                        <div class="logo-tagline">Treasured Clients, Priceless Care</div>
+                        <div class="logo-tagline">Healthcare Staffing and Home Care Services</div>
                     </div>
                 </div>
                 <div class="header-contact">
@@ -148,19 +96,18 @@
                     <li class="nav-item"><a href="services.html" class="nav-link active" id="nav-services">Our Services</a></li>
                     <li class="nav-item"><a href="careers.html" class="nav-link" id="nav-careers">Careers</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary header-btn">Contact Us</a>
+                <a href="about.html#contact-us" class="btn btn-primary header-btn">Contact Us</a>
             </div>
         </nav>
     </header>
     
-    <section class="hero" style="position: relative; background: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg'); background-size: cover; background-position: center; object-fit: cover; margin-top: 140px; padding: 80px 0;">
-        <div style="content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3); z-index: 1;"></div>
+    <section class="hero">
         <div class="container hero-content">
             <p class="hero-subtitle">What We Offer</p>
             <h1 class="hero-title">Our Healthcare Services</h1>
             <p class="hero-description">Comprehensive healthcare staffing and personalized home care services tailored to your unique needs.</p>
             <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-white">Request a Consultation</a>
+                <a href="about.html#contact-us" class="btn btn-white">Request a Consultation</a>
                 <a href="about.html" class="btn btn-outline">About Us</a>
             </div>
         </div>
@@ -176,7 +123,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                        <img src="https://static.wixstatic.com/media/11062b_a5f897947aaa44af903687c6ae4cc66b~mv2.jpg/v1/fill/w_239,h_136,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_a5f897947aaa44af903687c6ae4cc66b~mv2.jpg" alt="Companionship">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Companionship</h3>
@@ -185,7 +132,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-utensils"></i>
+                        <img src="https://static.wixstatic.com/media/590c0a94922ca09d6868a1c5f4bc1cd2.jpg/v1/fill/w_298,h_303,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/590c0a94922ca09d6868a1c5f4bc1cd2.jpg" alt="Meal Planning and Preparation">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Meal Planning and Preparation</h3>
@@ -194,7 +141,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-car"></i>
+                        <img src="https://static.wixstatic.com/media/11062b_8628a55628604b7593035fdeaf8ffad6~mv2.jpg/v1/fill/w_337,h_204,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8628a55628604b7593035fdeaf8ffad6~mv2.jpg" alt="Incidental Transportation">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Incidental Transportation</h3>
@@ -203,7 +150,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-broom"></i>
+                        <img src="https://static.wixstatic.com/media/11062b_41561a16bd94495d8c9c685b35a1f468~mv2.jpg/v1/fill/w_337,h_148,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_41561a16bd94495d8c9c685b35a1f468~mv2.jpg" alt="Light Housekeeping">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Light Housekeeping</h3>
@@ -212,7 +159,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
+                        <img src="https://static.wixstatic.com/media/cbf12b58da514be9959d227cf97d9bb4.jpg/v1/fill/w_525,h_193,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cbf12b58da514be9959d227cf97d9bb4.jpg" alt="Health Management">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Health Management</h3>
@@ -221,7 +168,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-hands-helping"></i>
+                        <img src="https://static.wixstatic.com/media/11062b_eef3d84f91514567a3856cab931f6b47~mv2.jpg/v1/fill/w_273,h_167,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_eef3d84f91514567a3856cab931f6b47~mv2.jpg" alt="Personal Care">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Personal Care</h3>
@@ -230,7 +177,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                        <img src="https://static.wixstatic.com/media/11062b_bcfb88c448bb40f4a1d81bc7401b878f~mv2.jpg/v1/fill/w_364,h_198,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_bcfb88c448bb40f4a1d81bc7401b878f~mv2.jpg" alt="Household Management">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Household Management</h3>
@@ -239,7 +186,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-brain"></i>
+                        <img src="https://static.wixstatic.com/media/8425ecadf47444dfb40f79663d4cb9c5.jpg/v1/fill/w_357,h_185,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8425ecadf47444dfb40f79663d4cb9c5.jpg" alt="Alzheimer's and Dementia Care">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Alzheimer's and Dementia Care</h3>
@@ -248,7 +195,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-hourglass-half"></i>
+                        <img src="https://static.wixstatic.com/media/11062b_83b97b01fa0e455b9d43945e5d65d989~mv2.jpg/v1/fill/w_351,h_153,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_83b97b01fa0e455b9d43945e5d65d989~mv2.jpg" alt="Respite Care">
                     </div>
                     <div class="service-content">
                         <h3 class="service-title">Respite Care</h3>
@@ -258,107 +205,14 @@
             </div>
         </div>
     </section>
-    
-    <section class="service-details">
-        <div class="container service-details-container">
-            <div class="service-detail-item">
-                <div class="service-detail-image" style="background-image: url('https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg');"></div>
-                <div class="service-detail-content">
-                    <h3 class="service-detail-title">Healthcare Staffing</h3>
-                    <p class="service-detail-description">Our healthcare staffing division provides qualified healthcare professionals to meet the needs of various healthcare facilities and organizations.</p>
-                    <ul class="service-detail-list">
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Registered Nurses (RNs)</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Licensed Practical Nurses (LPNs)</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Personal Support Workers (PSWs)</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Healthcare Aides</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Specialized Care Providers</div>
-                        </li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Request Staffing Services</a>
-                </div>
-            </div>
-            
-            <div class="service-detail-item">
-                <div class="service-detail-image" style="background-image: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg');"></div>
-                <div class="service-detail-content">
-                    <h3 class="service-detail-title">Home Care Services</h3>
-                    <p class="service-detail-description">Our personalized home care services are designed to help individuals maintain their independence and quality of life in the comfort of their own homes.</p>
-                    <ul class="service-detail-list">
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Personal Care Assistance</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Medication Management</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Meal Preparation and Nutrition</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Companionship and Social Support</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Light Housekeeping and Errands</div>
-                        </li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Request Home Care Services</a>
-                </div>
-            </div>
-            
-            <div class="service-detail-item">
-                <div class="service-detail-image" style="background-image: url('https://static.wixstatic.com/media/11062b_9b6d8c72e8e44d0d9e74f8d389d4c2b3~mv2.jpg/v1/fill/w_925,h_617,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_9b6d8c72e8e44d0d9e74f8d389d4c2b3~mv2.jpg');"></div>
-                <div class="service-detail-content">
-                    <h3 class="service-detail-title">Specialized Care Programs</h3>
-                    <p class="service-detail-description">We offer specialized care programs tailored to meet the unique needs of individuals with specific health conditions or requirements.</p>
-                    <ul class="service-detail-list">
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Alzheimer's and Dementia Care</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Post-Hospital Recovery Care</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Palliative and End-of-Life Care</div>
-                        </li>
-                        <li class="service-detail-list-item">
-                            <i class="fas fa-check-circle service-detail-list-icon"></i>
-                            <div>Respite Care for Family Caregivers</div>
-                        </li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Learn More About Specialized Care</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+  
     <section class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Need Personalized Healthcare Services?</h2>
                 <p class="cta-description">Contact us today to discuss how we can meet your healthcare staffing or home care needs.</p>
-                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
-                <a href="contact.html" class="btn btn-white">Request a Consultation</a>
+                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now &nbsp; <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
+                <a href="about.html#contact-us" class="btn btn-outline">Request a Consultation</a>
             </div>
         </div>
     </section>
@@ -425,7 +279,7 @@
                 <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
                 <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="about.html#contact-us" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
     </div>

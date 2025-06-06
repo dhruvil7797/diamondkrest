@@ -328,6 +328,8 @@ a {
     z-index: 2;
     border-radius: var(--border-radius);
     backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
 }
 
 .hero-subtitle {
@@ -637,7 +639,7 @@ a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -656,7 +658,7 @@ a {
 }
 
 .service-icon {
-    height: 120px;
+    height: 200px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     display: flex;
     justify-content: center;
