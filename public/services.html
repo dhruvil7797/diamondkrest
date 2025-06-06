@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - DiamondKrest Healthcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common/styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('nav-services').classList.add('active');
+        });
+    </script>
+    <style>
+        /* Custom styles for this page */
+        .hero {
+            position: relative;
+            background: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg');
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+            padding: 80px 0; /* Increased padding for better spacing */
+        }
+        
+        /* Calculate header height and adjust hero section accordingly */
+        body {
+            padding-top: 0; /* Remove padding from body */
+        }
+        
+        .header {
+            background-color: rgba(255, 255, 255, 0.95); /* Add background to header */
+        }
+        
+        /* Media queries for responsive header height */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px; /* Smaller padding for mobile */
+            }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            max-width: 800px;
+            margin: 0 auto;
+            backdrop-filter: blur(3px);
+        }
+        
+        .hero-title, .hero-subtitle, .hero-description {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+        }
+        
+        .hero-buttons {
+            margin-top: 30px;
+        }
+        
+        .hero-buttons .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border-width: 2px;
+        }
+        
+        .hero-buttons .btn-white {
+            background-color: var(--accent);
+            color: var(--text-light);
+            border: none;
+        }
+        
+        .hero-buttons .btn-white:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-5px);
+        }
+        
+        .hero-buttons .btn-outline {
+            border-color: var(--text-light);
+            color: var(--text-light);
+        }
+        
+        .hero-buttons .btn-outline:hover {
+            background-color: var(--text-light);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body style="padding-top: 0;">
+    <!-- Header -->
+    <header class="header" style="position: fixed; width: 100%; top: 0; z-index: 1000; background-color: rgba(255, 255, 255, 0.95);">
+        <div class="header-top">
+            <div class="container header-top-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">
+                        <div class="logo-title">DiamondKrest</div>
+                        <div class="logo-tagline">Treasured Clients, Priceless Care</div>
+                    </div>
+                </div>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <a href="tel:6139862724" style="color: inherit; text-decoration: none;">
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <a href="mailto:info@diamondkrest.com" style="color: inherit; text-decoration: none;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-info">
+                            <span class="contact-value">Available 24/7, 365 days a year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active" id="nav-services">Our Services</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link" id="nav-careers">Careers</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary header-btn">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero" style="position: relative; background: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg'); background-size: cover; background-position: center; object-fit: cover; margin-top: 140px; padding: 80px 0;">
+        <div style="content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 110, 165, 0.4) 0%, rgba(107, 196, 166, 0.4) 100%), rgba(0, 0, 0, 0.3); z-index: 1;"></div>
+        <div class="container hero-content">
+            <p class="hero-subtitle">What We Offer</p>
+            <h1 class="hero-title">Our Healthcare Services</h1>
+            <p class="hero-description">Comprehensive healthcare staffing and personalized home care services tailored to your unique needs.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-white">Request a Consultation</a>
+                <a href="about.html" class="btn btn-outline">About Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Our Services</p>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-description">Our Home Care Services team is dedicated to creating personalized care plans that meet the unique needs of each individual.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Companionship</h3>
+                        <p class="service-description">Providing emotional support and companionship to combat loneliness and isolation.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Meal Planning and Preparation</h3>
+                        <p class="service-description">Nutritious meal planning and preparation according to dietary needs and preferences.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Incidental Transportation</h3>
+                        <p class="service-description">Safe transportation for appointments, shopping, and social activities.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Light Housekeeping</h3>
+                        <p class="service-description">Assistance with maintaining a clean and safe living environment.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Health Management</h3>
+                        <p class="service-description">Monitoring health conditions and medication reminders.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Personal Care</h3>
+                        <p class="service-description">Assistance with daily activities like bathing, dressing, and grooming.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Household Management</h3>
+                        <p class="service-description">Help with managing household tasks and responsibilities.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Alzheimer's and Dementia Care</h3>
+                        <p class="service-description">Specialized care for individuals with Alzheimer's and dementia.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Respite Care</h3>
+                        <p class="service-description">Temporary relief for primary caregivers to rest and recharge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-details">
+        <div class="container service-details-container">
+            <div class="service-detail-item">
+                <div class="service-detail-image" style="background-image: url('https://static.wixstatic.com/media/51a460_1ff15b38e9d44fef90a521f2ef65c372~mv2.jpg/v1/fill/w_1962,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1440720887.jpg');"></div>
+                <div class="service-detail-content">
+                    <h3 class="service-detail-title">Healthcare Staffing</h3>
+                    <p class="service-detail-description">Our healthcare staffing division provides qualified healthcare professionals to meet the needs of various healthcare facilities and organizations.</p>
+                    <ul class="service-detail-list">
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Registered Nurses (RNs)</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Licensed Practical Nurses (LPNs)</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Personal Support Workers (PSWs)</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Healthcare Aides</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Specialized Care Providers</div>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Request Staffing Services</a>
+                </div>
+            </div>
+            
+            <div class="service-detail-item">
+                <div class="service-detail-image" style="background-image: url('https://static.wixstatic.com/media/51a460_43e0d92efe9d4372b8495557e74e3e4f~mv2.jpg/v1/fill/w_1962,h_1444,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/iStock-1170513134_edited.jpg');"></div>
+                <div class="service-detail-content">
+                    <h3 class="service-detail-title">Home Care Services</h3>
+                    <p class="service-detail-description">Our personalized home care services are designed to help individuals maintain their independence and quality of life in the comfort of their own homes.</p>
+                    <ul class="service-detail-list">
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Personal Care Assistance</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Medication Management</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Meal Preparation and Nutrition</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Companionship and Social Support</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Light Housekeeping and Errands</div>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Request Home Care Services</a>
+                </div>
+            </div>
+            
+            <div class="service-detail-item">
+                <div class="service-detail-image" style="background-image: url('https://static.wixstatic.com/media/11062b_9b6d8c72e8e44d0d9e74f8d389d4c2b3~mv2.jpg/v1/fill/w_925,h_617,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_9b6d8c72e8e44d0d9e74f8d389d4c2b3~mv2.jpg');"></div>
+                <div class="service-detail-content">
+                    <h3 class="service-detail-title">Specialized Care Programs</h3>
+                    <p class="service-detail-description">We offer specialized care programs tailored to meet the unique needs of individuals with specific health conditions or requirements.</p>
+                    <ul class="service-detail-list">
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Alzheimer's and Dementia Care</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Post-Hospital Recovery Care</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Palliative and End-of-Life Care</div>
+                        </li>
+                        <li class="service-detail-list-item">
+                            <i class="fas fa-check-circle service-detail-list-icon"></i>
+                            <div>Respite Care for Family Caregivers</div>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Learn More About Specialized Care</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Need Personalized Healthcare Services?</h2>
+                <p class="cta-description">Contact us today to discuss how we can meet your healthcare staffing or home care needs.</p>
+                <div class="cta-phone"><i class="fas fa-phone-alt"></i> Call now <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></div>
+                <a href="contact.html" class="btn btn-white">Request a Consultation</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>About DiamondKrest</h3>
+                    <p>DiamondKrest provides professional healthcare staffing and personalized home care services in Ottawa.</p>
+                    <p>Treasured Clients, Priceless Care</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p>1338 Wellington Street West</p>
+                            <p>Ottawa, ON K1Y 3B7, Unit 10</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <p>Phone: <a href="tel:6139862724" style="color: inherit; text-decoration: none;">613-986-2724</a></p>
+                            <p>Fax: 613-672-7016</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p>Email: <a href="mailto:info@diamondkrest.com" style="color: inherit; text-decoration: none;">info@diamondkrest.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Hours of Operation</h3>
+                    <p>Available 24 hours a day</p>
+                    <p>7 days a week</p>
+                    <p>365 days a year</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DiamondKrest Healthcare Staffing and Home Care Services. All Rights Reserved. | Treasured Clients, Priceless Care</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-menu-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
+                <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <script>
+        // Add scrolled class to header when scrolling
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            });
+        }
+        
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            });
+        }
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-nav .nav-link');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
