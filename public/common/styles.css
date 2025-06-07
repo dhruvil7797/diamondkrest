@@ -308,7 +308,7 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    height: calc(100vh - 174px);
+    height: 60vh;
     background-size: 100% 100%; /* Stretch to fill both width and height */
     background-repeat: no-repeat;
     background-position: center;
@@ -351,7 +351,7 @@ a {
 }
 
 .hero-title {
-    font-size: 56px;
+    font-size: 36px;
     margin-bottom: 20px;
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
@@ -1162,7 +1162,7 @@ a {
     }
     
     .hero {
-        height: calc(100vh - 80px);
+        height: 60vh;
         padding: 0;
     }
     
@@ -1211,7 +1211,7 @@ a {
     }
     
     .hero-title {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .hero-buttons {

@@ -17,8 +17,16 @@
     <style>
         .hero {
             background-image: url('./images/image5.avif');
+            height: calc(100vh - 174px);
         }
         
+        @media (max-width: 768px) {
+            .hero {
+                height: calc(100vh - 80px);
+                padding: 0;
+            }
+        }
+
         .location-title {
             font-size: 36px;
             color: var(--primary);
@@ -82,7 +90,11 @@
         <div class="header-top">
             <div class="container header-top-content">
                 <div class="logo">
-                    <div class="logo-icon"></div>
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            
+                        </div>
+                    </a>
                     <div class="logo-text">
                         <a href="index.html">
                             <div class="logo-title">DiamondKrest</div>
