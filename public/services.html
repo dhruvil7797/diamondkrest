@@ -48,6 +48,91 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Service section styles */
+        .service-section {
+            padding: 60px 0;
+        }
+        
+        .service-section:nth-child(odd) {
+            background-color: var(--secondary);
+        }
+        
+        .service-section:nth-child(even) {
+            background-color: var(--text-light);
+        }
+        
+        /* Staffing services styles */
+        .staffing-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: var(--secondary);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .staffing-title {
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .staffing-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .staffing-description {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        /* Additional services styles */
+        .additional-services {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: var(--secondary);
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--accent);
+        }
+        
+        .additional-services h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .additional-services ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .additional-services li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .additional-services li:before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
     </style>
 </head>
 <body>
@@ -58,12 +143,13 @@
                 <div class="logo">
                     <a href="index.html">
                         <div class="logo-icon">
-                            
+                            <img style="width: 100%;" src="./images/logo.png" />
                         </div>
                     </a>
                     <div class="logo-text">
                         <a href="index.html">
                             <div class="logo-title">DiamondKrest</div>
+                            <div class="logo-subtitle">Treasured Clients, Priceless Care</div>
                         </a>
                         <div class="logo-tagline">Healthcare Staffing and Home Care Services</div>
                     </div>
@@ -119,11 +205,11 @@
         </div>
     </section>
     
-    <section class="services">
+    <!-- Home Care Services Section -->
+    <section class="service-section">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Our Services</p>
-                <h2 class="section-title">What We Offer</h2>
+                <h2 class="section-title">Home Care Services</h2>
                 <p class="section-description">Our Home Care Services team is dedicated to creating personalized care plans that meet the unique needs of each individual.</p>
             </div>
             <div class="services-grid">
@@ -208,6 +294,24 @@
                         <p class="service-description">Temporary relief for primary caregivers to rest and recharge.</p>
                     </div>
                 </div>
+            </div>
+            
+            <div class="additional-services">
+                <h3>Additional Home Care Services</h3>
+                <ul>
+                    <li>In home Hairdressing Services</li>
+                    <li>In home nail care</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Staffing Services Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="staffing-container">
+                <h2 class="staffing-title">Staffing Services</h2>
+                <p class="staffing-description">Our staffing division supply highly qualified, experienced staff on demand.</p>
             </div>
         </div>
     </section>

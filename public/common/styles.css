@@ -31,7 +31,7 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 80px; /* Smaller padding for mobile */
+        padding-top: 95px; /* Smaller padding for mobile */
     }
 }
 
@@ -126,7 +126,7 @@ a {
 }
 
 .header-top {
-    padding: 15px 0;
+    padding: 5px 0;
     border-bottom: 1px solid var(--gray-light);
 }
 
@@ -162,7 +162,6 @@ a {
 }
 
 .logo-icon::after {
-    content: '♦';
     position: absolute;
     top: 0;
     left: 0;
@@ -186,6 +185,13 @@ a {
     font-family: 'Lora', serif;
     font-size: 24px;
     font-weight: 700;
+    color: #666;
+}
+
+.logo-subtitle {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-weight: 200;
     color: #666;
     margin-bottom: 2px;
 }
@@ -308,14 +314,14 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    height: calc(100vh - 174px);
+    height: calc(100vh - 180px);
     background-size: 100% 100%; /* Stretch to fill both width and height */
     background-repeat: no-repeat;
     background-position: center;
     color: var(--text-light);
     display: flex;
     align-items: center;
-    margin-top: 174px;
+    margin-top: 180px;
     padding: 80px 0;
 }
 
@@ -326,7 +332,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(58, 110, 165, 0.25) 0%, rgba(107, 196, 166, 0.25) 100%), rgba(0, 0, 0, 0.25);
+    /* background: linear-gradient(135deg, rgba(58, 110, 165, 0.25) 0%, rgba(107, 196, 166, 0.25) 100%), rgba(0, 0, 0, 0.25); */
     z-index: 1;
 }
 
@@ -337,7 +343,7 @@ a {
     z-index: 2;
     border-radius: var(--border-radius);
     backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 0 auto;
 }
 
@@ -983,7 +989,6 @@ a {
     color: var(--accent);
     font-size: 20px;
     margin-right: 15px;
-    margin-top: 5px;
 }
 
 .map-info-text {
@@ -1039,7 +1044,6 @@ a {
     color: var(--accent);
     font-size: 18px;
     margin-right: 15px;
-    margin-top: 5px;
 }
 
 .footer-bottom {
@@ -1162,7 +1166,7 @@ a {
     }
     
     .hero {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 95px);
         padding: 0;
     }
     
@@ -1174,7 +1178,7 @@ a {
         display: block;
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 35px;
         z-index: 100;
     }
     
