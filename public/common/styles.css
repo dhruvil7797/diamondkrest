@@ -147,7 +147,7 @@ a {
     height: 70px;
     margin-right: 15px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -230,6 +230,7 @@ a {
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    position: relative;
 }
 
 .contact-icon i {
@@ -252,6 +253,39 @@ a {
 .contact-value {
     font-weight: 600;
     color: var(--text-dark);
+}
+
+.contact-tooltip {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.contact-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--primary);
+}
+
+.contact-icon:hover .contact-tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: -50px;
 }
 
 /* Navigation */
@@ -337,12 +371,12 @@ a {
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 40px;
+    max-width: 600px;
+    padding: 30px;
     position: relative;
     z-index: 2;
     border-radius: var(--border-radius);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     background-color: rgba(0, 0, 0, 0.7);
     margin: 0 auto;
 }
