@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="common/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('nav-about').classList.add('active');
@@ -434,7 +435,7 @@
                     <form action="https://formsubmit.co/info@DiamondKrest.com" method="POST" class="contact-form">
                         <input type="hidden" name="_subject" value="New contact form submission from DiamondKrest website">
                         <input type="hidden" name="_next" value="https://www.diamondkrest.com/thank-you.html">
-                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_captcha" value="true">
                         
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -459,6 +460,10 @@
                         <div class="form-group full-width">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width" style="margin-bottom: 20px;">
+                            <div class="g-recaptcha" data-sitekey="6LfP2oIrAAAAAL9UpBZzvvM3FKLfhwjjRwtFvfZJ"></div>
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Send Message</button>
